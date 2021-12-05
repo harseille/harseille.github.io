@@ -1,41 +1,26 @@
-<!DOCTYPE HTML>
-<html lang="en" >
-    <head>
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
 
-        {%- include head.html -%}
+  <body>
+    {% include header.html %}
 
-        {% assign reversed_posts = site.posts | reverse %}
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="home">
+          <img
+            src="{{ page.profile_picture.src | absolute_url }}"
+            alt="{{ page.profile_picture.alt }}"
+            class="profile-pic"
+          />
 
-        {% if reversed_posts %}
-            <link rel="next" href="{{site.baseurl}}{{reversed_posts.first.url}}" />
-        {% endif %}
-    </head>
-    <body>
-        <div class="book">
-
-            {%- include toc-date.html -%}
-
-            <div class="book-body">
-                {%- include body.html -%}
-
-                {% if reversed_posts %}
-                    <a href="{{site.baseurl}}{{reversed_posts.first.url}}" class="navigation navigation-next navigation-unique" aria-label="Next page: {{reversed_posts.first.title}}">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-                {% endif %}
-            </div>
-
-            <!-- {%- include search.html -%} -->
-
-            <script>
-            var gitbook = gitbook || [];
-            gitbook.push(function() {
-                gitbook.page.hasChanged({%- include metadata-home.json.tpl -%});
-            });
-            </script>
+          {{ content }}
         </div>
+      </div>
+    </div>
 
-        {%- include footer.html -%}
+    {% include footer.html %}
 
-    </body>
+    {% include foot.html %}
+  </body>
 </html>

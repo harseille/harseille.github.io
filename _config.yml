@@ -1,54 +1,64 @@
-# Configurations
-title:            harseille
-longtitle:        Front개발자로
-author:           Benja P
-email:            joonhabaak@gmail.com
-description: >
-  금융IT개발자에서 Front-end개발로 전직기로
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-version:          1.0
-gitbook_version:  3.2.3
+title: Bay Jekyll Theme
+description: >- # this means to ignore newlines until "baseurl:"
+  Bay is a minimal Jekyll Theme.
+baseurl: "/bay" # the subpath of the site
+url: "https://eliottvincent.github.io" # the base hostname & protocol for the site
+og_image: /assets/img/profile-pic.jpg
+google_analytics: "UA-121636368-3"
 
-url:              'https://harseille.github.io'
-baseurl:          '/jekyll-gitbook'
-rss:              RSS
+header:
+  pages:
+    - name: Home
+      slug: /
+    - name: Work
+    - name: Blog
 
-toc:
-  enabled: true
-  h_min: 1
-  h_max: 3
+footer:
+  show_powered_by: true
+  contact:
+    - name: Email
+      value: yourmail@domain.com
+      link: mailto:yourmail@domain.com
+    - name: WeChat
+      value: YourWeChatUsername
+      link: "#"
+  follow:
+    - name: Twitter
+      link: http://twitter.com/YourTwitterUsername
+      username: "@YourTwitterUsername"
+    - name: Facebook
+      link: http://facebook.com/YourFacebookUsername
+    - name: LinkedIn
+      link: http://linkedin.com/in/YourLinkedInUsername
+    - name: GitHub
+      link: http://github.com/YourGitHubUsername
+    - name: Dribbble
+      link: https://dribbble.com/YourDribbbleUsername
+    - name: RSS
+      link: /feed.xml
 
-# Search settings
-tipue_search:
-  include:
-    pages: true
-  exclude:
-    files: [index.md, search.html]
-
-# markdown render engine.
-markdown:         kramdown
-kramdown:
-  auto_ids:               true
-  input:                  GFM
-  math_engine:            mathjax
-  smart_quotes:           lsquo,rsquo,ldquo,rdquo
-  toc_levels:             1..6
-  syntax_highlighter:     rouge
-  syntax_highlighter_opts:
-    guess_lang:           true
-
-markdown_ext:     markdown,mkdown,mkdn,mkd,md
-
-# Permalinks
-permalink:        /:categories/:year-:month-:day-:title:output_ext
-
-exclude:
-  - _drafts
-
-destination:      ./_site
-incremental:      false
-regenerate:       true
-
+# Build settings
+markdown: kramdown
+sass:
+    style: :compressed
 plugins:
   - jekyll-feed
-  - jemoji
+
+# Excluded items
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - feed.xml
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Used for defeating caching
+version: 1
