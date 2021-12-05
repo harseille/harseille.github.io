@@ -6,9 +6,10 @@ profile_picture:
 ---
 
 <p>
-  Welcome! This site serves as an example for the Bay Jekyll theme. Bay is a very simple and minimal theme, directly inspired by Dan Grover's <a href="http://dangrover.com">website</a>.
+    안녕하세요! benja의 개발 blog harseille입니다.
+    
 </p>
 
 <p>
-  You can find the source code and the instructions on <a href="https://github.com/eliottvincent/bay">GitHub</a>.
+  You can find the source code and the instructions on <a href="https://github.com/harseille">GitHub</a>.
 </p>
